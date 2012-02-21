@@ -21,9 +21,9 @@ if running_apps.include? 'Google Chrome'
     end
   end
 
-  play_pause_js = <<-EOJS
-  $('.pauseButton:visible:first').click();
+  pause_js = <<-EOJS
+  Pandora.pauseMusic(true)
   EOJS
 
-  pandora_tab && pandora_tab.executeJavascript(play_pause_js)
+  pandora_tab && pandora_tab.executeJavascript(pause_js)
 end
